@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5d8b18a-1fa2-4420-afd4-6a8636f23dfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/danlibs/domain/Bootcamp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/danlibs/domain/Conteudo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/danlibs/domain/Curso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/danlibs/domain/Dev.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/danlibs/domain/Mentoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/danlibs/domain/Projeto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/danlibs/domain/Ranking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danlibs/domain/Dev.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danlibs/domain/Dev.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danlibs/domain/Dev.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danlibs/domain/Dev.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

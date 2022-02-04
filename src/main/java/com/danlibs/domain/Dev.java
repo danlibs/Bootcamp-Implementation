@@ -9,6 +9,7 @@ public class Dev {
     private String nome;
     private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+    private Set<Projeto> projetosRealizados = new LinkedHashSet<>();
 
     public Dev(String nome) {
         this.nome = nome;
@@ -23,6 +24,7 @@ public class Dev {
         Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
         if (conteudo.isPresent()) {
             this.conteudosConcluidos.add(conteudo.get());
+            if (conteudo.get() instanceof Projeto) entregarProjeto((Projeto) conteudo.get());
             this.conteudosInscritos.remove(conteudo.get());
         } else {
             System.err.println("Você não está matriculado em nenhum conteúdo.");
@@ -33,6 +35,10 @@ public class Dev {
         return this.conteudosConcluidos.stream()
                 .mapToDouble(Conteudo::calcularXP)
                 .sum();
+    }
+
+    public void entregarProjeto(Projeto projeto) {
+        this.projetosRealizados.add(projeto);
     }
 
     public String getNome() {
@@ -59,16 +65,24 @@ public class Dev {
         this.conteudosConcluidos = conteudosConcluidos;
     }
 
+    public Set<Projeto> getProjetosRealizados() {
+        return projetosRealizados;
+    }
+
+    public void setProjetosRealizados(Set<Projeto> projetosRealizados) {
+        this.projetosRealizados = projetosRealizados;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Dev dev = (Dev) o;
-        return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
+        return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos) && Objects.equals(projetosRealizados, dev.projetosRealizados);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
+        return Objects.hash(nome, conteudosInscritos, conteudosConcluidos, projetosRealizados);
     }
 }
